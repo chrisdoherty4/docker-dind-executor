@@ -14,3 +14,5 @@ build:
   script:
     - docker build -t $IMAGE_NAME .
     - docker push $IMAGE_NAME
+  tags:
+    - docker-builder
