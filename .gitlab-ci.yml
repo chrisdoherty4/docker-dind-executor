@@ -9,6 +9,11 @@ build:
   rules:
     - if: '$CI_COMMIT_REF_NAME == "master"'
       when: always
+  services:
+    - docker:stable-dind
+  image: alpine
+  before_script:
+    - apk add docker
   script:
     - docker build -t $IMAGE_NAME .
     - docker push $IMAGE_NAME
