@@ -2,7 +2,7 @@
 
 info()
 {
-    echo "[docker-slim] $1"
+    echo "[container] $1"
 }
 
 log=/var/log/dockerd-entrypoint.log
